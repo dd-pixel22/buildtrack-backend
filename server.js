@@ -35,10 +35,10 @@ app.get("/api/health", async (req, res) => {
       database: "MySQL is working"
     });
   } catch (error) {
-    console.error("Database connection failed:", error.message);
+    console.error("Database connection failed:", error);
     res.status(500).json({
       status: "error",
-      message: "Database connection failed"
+      message: error.message
     });
   }
 });
