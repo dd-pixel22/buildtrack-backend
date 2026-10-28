@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors({
   origin: "https://dd-pixel22.github.io"
-}));
+})); 
 app.use(express.json());
 
 const db = mysql.createPool({
